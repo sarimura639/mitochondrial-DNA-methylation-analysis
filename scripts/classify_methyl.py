@@ -50,9 +50,9 @@ def classify_methylation(txt_file, fasta_dict, output_file):
                 writer.writerow([chrom, start + 1, end, methylation_level, meth_reads, unmeth_reads, c_type])
 # main
 if __name__ == "__main__":
-    fasta_file = "../ngctrl1/ngctrl1.fasta"  # reference file
-    txt_file = "suptongctrl.txt"  # original txt file
-    output_file = "suptongctrl_with_methylation_types.txt"  # output file
+    fasta_file = "../mito1/BK010421_M.fasta"  # reference file
+    txt_file = "suptomito.txt"  # original txt file
+    output_file = "suptomito_with_methylation_types.txt"  # output file
 
     fasta_dict = read_fasta(fasta_file)  # read reference 
     classify_methylation(txt_file, fasta_dict, output_file)  # classify and write
